@@ -1,0 +1,68 @@
+import { ArrowRight, Rocket } from "lucide-react";
+
+const buttonClass =
+  "inline-flex min-h-13 max-w-full items-center justify-center gap-2 rounded-xl px-3 py-3.5 text-[12px] font-extrabold whitespace-nowrap transition duration-200 hover:-translate-y-0.5 focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-[#bafc0c] sm:gap-2.5 sm:px-5 sm:text-[15px]";
+
+export function Hero() {
+  return (
+    <section
+      id="top"
+      className="relative z-1 grid min-h-[680px] place-items-center overflow-hidden sm:min-h-[max(680px,min(880px,100dvh))]"
+    >
+      <video
+        className="absolute inset-0 -z-10 h-full w-full object-cover"
+        autoPlay
+        loop
+        muted
+        playsInline
+        aria-hidden="true"
+      >
+        <source src="/video-hero.mp4" type="video/mp4" />
+      </video>
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-[#0a0c0d]/70 to-[#0a0c0d]/55" />
+      <div className="w-full max-w-[1280px] px-5 pt-12 pb-12 text-center sm:pt-8 sm:pb-18">
+        <p className="animate-[hero-fade-up_.7s_cubic-bezier(.22,1,.36,1)_both] inline-flex max-w-full items-center gap-2 whitespace-nowrap rounded-full border border-[#65891c]/50 bg-[#65891c]/15 px-2.5 py-2 font-mono text-[9px] uppercase tracking-[.12em] text-[#bafc0c] sm:px-3.5 sm:text-[11px] sm:tracking-[.2em]">
+          <span className="size-1.5 shrink-0 rounded-full bg-[#bafc0c] shadow-[0_0_10px_#bafc0c]" />
+          Agences immobilières spécialisées · Maroc
+        </p>
+        <h1 className="mx-auto mt-6 max-w-[1240px] text-balance text-[clamp(2.25rem,6.8vw,5.3rem)] font-black leading-[.98] tracking-[-.05em]">
+          <span className="hero-line">
+            <span className="animate-[hero-line-in_.8s_cubic-bezier(.22,1,.36,1)_both]">
+              Sites web, CRM et applications.
+            </span>
+          </span>
+          <span className="hero-line mt-1 sm:mt-2">
+            <em className="mx-auto animate-[hero-line-in_.8s_cubic-bezier(.22,1,.36,1)_.12s_both] text-[clamp(1.45rem,6.4vw,5rem)] text-[#bafc0c] sm:text-[clamp(2.5rem,6.4vw,5rem)]">
+              Pour votre agence immobilière.
+            </em>
+          </span>
+        </h1>
+        <p className="mx-auto mt-6 max-w-3xl animate-[hero-fade-up_.7s_cubic-bezier(.22,1,.36,1)_.45s_both] text-[16px] leading-relaxed text-gray-200 sm:text-[20px]">
+          Nous créons des sites web immobiliers, des CRM et des portails sur
+          mesure pour présenter vos biens, qualifier les demandes et suivre
+          chaque prospect. Des outils pensés pour votre spécialité au Maroc.
+        </p>
+        <div className="mt-8 flex animate-[hero-fade-up_.7s_cubic-bezier(.22,1,.36,1)_.6s_both] flex-wrap justify-center gap-3.5">
+          <a
+            className={`${buttonClass} bg-[#bafc0c] text-[#0a0c0d] shadow-[0_0_30px_rgba(186,252,12,.3)] hover:shadow-[0_0_42px_rgba(186,252,12,.48)]`}
+            href="#project-form"
+          >
+            <Rocket size={19} aria-hidden="true" />
+            Obtenir mon prototype gratuit
+            <ArrowRight size={19} aria-hidden="true" />
+          </a>
+        </div>
+        <div
+          aria-hidden="true"
+          className="mx-auto mt-8 flex w-37 items-center justify-center gap-2"
+        >
+          <span className="h-px flex-1 bg-gradient-to-r from-transparent to-[#65891c]" />
+          <i className="size-2 animate-pulse rounded-full bg-[#bafc0c] shadow-[0_0_10px_#bafc0c]" />
+          <i className="size-2 animate-pulse rounded-full bg-[#65891c] [animation-delay:250ms]" />
+          <i className="size-2 animate-pulse rounded-full bg-[#bafc0c] [animation-delay:500ms]" />
+          <span className="h-px flex-1 bg-gradient-to-l from-transparent to-[#65891c]" />
+        </div>
+      </div>
+    </section>
+  );
+}
